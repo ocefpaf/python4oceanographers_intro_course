@@ -1,5 +1,8 @@
 .PHONY: clean gen serve
 
+BASEDIR=$(CURDIR)
+OUTPUTDIR=$(BASEDIR)/deploy_production
+
 all: clean gen
 
 cp_notebooks:
@@ -21,7 +24,6 @@ clean: clean_notebooks
 update: gen
 
 publish:
-	hyde gen -c production.yaml
-	rsync -ar ./deploy_production/ ../../gh-pages/
-	cd ../../gh-pages/ && git add -A .  && git ci -m "hyde" && git push
-# 	hyde publish -c production.yaml -p github
+	hyde gen -r -c production.yaml
+	ghp-import $(OUTPUTDIR)
+	git push origin gh-pages
