@@ -10,4 +10,4 @@ publisher:
     github:
         type: hyde.ext.publishers.dvcs.Git
         path: .
-        url: git@github.com:ocefpaf/ocefpaf.github.io.git
+        url: git@github.com:ocefpaf/python4oceanographers_intro_course.git
