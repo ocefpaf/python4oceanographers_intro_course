@@ -22,4 +22,6 @@ update: gen
 
 publish:
 	hyde gen -c production.yaml
-	hyde publish -c production.yaml -p github
+	rsync -ar ./deploy_production/ ../../gh-pages/
+	cd ../../gh-pages/ && git add -A .  && git ci -m "hyde" && git push
+# 	hyde publish -c production.yaml -p github
