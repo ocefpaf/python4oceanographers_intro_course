@@ -1,0 +1,205 @@
+
+<!doctype html>
+<!-- https://github.com/paulirish/html5-boilerplate/blob/master/index.html -->
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+       Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=IE8">
+
+  <!-- encoding must be specified within the first 512 bytes
+        www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#charset -->
+
+  <!-- meta element for compatibility mode needs to be before
+        all elements except title & meta
+        msdn.microsoft.com/en-us/library/cc288325(VS.85).aspx -->
+  <!-- Chrome Frame is only invoked if meta element for
+        compatibility mode is within the first 1K bytes
+        code.google.com/p/chromium/issues/detail?id=23003 -->
+
+  <title>Introdução à linguagem de programação Python - Computer Setup</title>
+  <meta name="description" content="Setting up your computer">
+  <meta name="author" content="Filipe Fernandes">
+
+  <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <!-- Place favicon.ico
+        in the root of your domain and delete these references -->
+  <link rel="shortcut icon" href="/favicon.png">
+  
+      
+    <link rel="stylesheet" href="/media/css/site.css">
+  <link rel="stylesheet" href="/media/css/syntax.css">
+  
+    <!-- All JavaScript at the bottom, except for Modernizr which
+        enables HTML5 elements & feature detects -->
+    <script src="/media/js/libs/modernizr.custom.92358.js"></script>
+    </head>
+<body id="setup">
+    <div id="container">
+            <div id="main" role="main">
+          <header class="banner clearfix">
+          <h1><a href="/">
+          Introdução à linguagem de programação Python</a></h1>
+          <h2><small>Com exemplos práticos para oceanógrafos</smal></h2>
+<!--<img src="/media/images/biglogo.png" alt="ASTR 599" />-->
+          </h1>                              <nav class=main_nav>
+    <ul>
+                <li>
+            <a title="Homepage"
+                class="button white medium home"
+                href="/">
+                Home
+            </a>
+        </li>        <li>
+            <a title="Programa do Curso"
+                class="button white medium schedule"
+                href="/schedule">
+                Programa
+            </a>
+        </li>        <li>
+            <a title="Preparando o computador"
+                class="button white medium active setup"
+                href="/setup">
+                Preparando o computador
+            </a>
+        </li>        <li>
+            <a title="Links and Downloads"
+                class="button white medium downloads"
+                href="/downloads">
+                Links/Downloads
+            </a>
+        </li>    </ul>
+</nav>
+                    </header>
+          <section class="content">
+          <h1>Preparando o seu Computador</h1>
+
+<div class="columns">
+  <div class="box column" id="setup">
+    <h2>Hardware e Software</h2>
+    <p>
+      É essencial que cada aluno tenho seu próprio laptop ou desktop durante
+      o curso.  O curso foi desenhado para ser independente to sistema
+      operacional, mas é altamente recomendado o uso de de um sistema
+    <i>Unix-based</i> (como Linux).
+    </p>
+  </div>
+
+  <div class="box column" id="setup">
+    <h2>Instalando Python</h2>
+    <p>
+      Nesse curso utilizaremos <b>Python 3</b>, mas a sintaxe que utilizaremos
+      será aproximadamente 99% compatível com <b>Python 2.7</b>.
+    </p>
+
+    <h3>Módulos</h3>
+    <p>
+      Além do interpretador Python nos utilizaremos uma gama de pacotes
+      científicos:
+    </p>
+    <ul>
+      <li><a href="http://www.numpy.org">NumPy</a>: Módulo fundamental para computação científica em Python.</li>
+      <li><a href="http://www.scipy.org">SciPy</a>: Ecossistema em Python baseado em software livre  para matemática, ciência, e engenharia.</li>
+      <li><a href="http://www.matplotlib.org">matplotlib</a>: Biblioteca de plotagem 2D.</li>
+      <li><a href="http://ipython.org">IPython</a>: Ambiente Python interativo</li>
+    </ul>
+
+    <h3>Instalação</h3>
+    <p>Para instalar tudo eu recomendo o instalador <a href="https://store.continuum.io/cshop/anaconda/">Anaconda</a>, um produto
+    gratuito oferecido pela ContinuumIO.<p>
+      <ol>
+    <li>Baixe e instale Anaconda no seu sistema utilizando o link acima.
+      <pre>[~]$ bash Anaconda-1.x.x-Linux-x86.sh</pre>
+      Substitua Anaconda-1.x.x-Linux-x86.sh pela versão que você baixou.
+    </li>
+    <li><b>Abra uma janela do terminal</b>, e acerte o seu $PATH para apontar
+    para a instalação do Anaconda.  Test com
+    <pre>[~]$ which python</pre>
+      O resultado deve mostra o caminho da instalação nova.
+    <li>Atualize a sua distribuição Anaconda digitando
+      <pre>[~]$ conda update conda</pre>
+      (Conda é o gerenciador de pacotes do Anaconda.)
+    </li>
+    <li>Adicione um canal de módulos
+      <pre>[~]$ conda config --add channels https://conda.binstar.org/ocefpaf</pre>
+      (Conda é o gerenciador de pacotes do Anaconda.)
+    </li>
+    <li>Adicione um canal de módulos
+      <pre>[~]$ conda config --add channels https://conda.binstar.org/ocefpaf</pre>
+      (Conda é o gerenciador de pacotes do Anaconda.)
+    </li>
+    <li>Instale o software necessário para o curso com
+      <pre>[~]$ conda create -n curso --file req.txt</pre>
+      (Baixe <a href="http://404.html">
+    aqui</a> o arquivo req.txt.)
+    </li>
+    <li>Confira se o seu IPython notebook está funcionando corretamente: digite
+      <pre>[~] ipython notebook</pre>
+      e uma janela do seu browser deve abrir mostrando o notebook.
+      </ol>
+  </div>
+
+  <div class="box column" id="setup">
+    <h2>Instalando Git</h2>
+    <p>
+      <a href="http://git-scm.com/">Git</a> pode ser facilmente instalado
+      no linux.  Instruções mais detalhadas podem ser encontradas
+      <a href="http://git-scm.com/book/en/Getting-Started-Installing-Git">aqui</a>.
+     </p>
+
+    <h3>Linux</h3>
+      <p>use o gerenciador de pacotes da sua distribuição linux
+      <pre>[~]$ sudo zypper in git # OpenSUSE</pre>
+      ou
+      <pre>[~]$ sudo apt-get install git # Debian/Ubuntu</pre>
+      ou
+      <pre>[~]$ yum install git-core # Fedora/RedHat</pre>
+    </p>
+
+    <h3>Windows</h3>
+      <p>
+        Git pode ser instalado em windows usando as ferramentas disponíveis
+        em <a href="http://msysgit.github.com/">http://msysgit.github.com/</a>.
+      </p>
+
+  </div>
+
+  <div class="box column" id="setup">
+    <h2>Baixando o Material do Curso</h2>
+    <p>Depois de instalar Git você pode baixar todo o conteúdo do curso
+    (incluindo o código fonte HTML dessa página) digitando
+      <pre>[~]$ git clone https://github.com/ocefpaf/python4oceanographers_intro_course.git</pre>
+      Caso queira se manter atualizado com o conteúdo entre na pasta criado e digite
+      <pre>[~]$ cd python4oceanographers_intro_course<br>[~]$ git pull</pre>
+  </div>
+</div>
+
+          </section>
+      </div>
+      </div> <!--! end of #container -->
+  <footer>
+       <p><small>
+       Introdução à linguagem de programação Python está licenciado com uma Licença <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons - Atribuição 4.0 Internacional</a>.
+       <br  />
+       <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+       <img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+       </small>
+       </p>
+  </footer>
+      <!-- Javascript at the bottom for fast page loading -->
+    <script src="/media/js/libs/jquery-1.7.1.min.js"></script>
+  <script src="/media/js/libs/jquery.timeago.js"></script>
+  
+      <script defer="defer" src="/media/js/main.js"></script>
+    <script defer="defer" src="/media/js/carousel.js"></script>
+  
+  </body>
+</html>

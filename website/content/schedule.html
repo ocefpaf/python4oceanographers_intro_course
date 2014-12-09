@@ -1,0 +1,63 @@
+---
+extends: base.j2
+default_block: main
+title: Programa do Curso
+description: Programa do Curso
+---
+
+
+<h1>Programa do Curso</h1>
+<div class="columns">
+  <div class="box column" id="schedule">
+    <p>
+      O curso será ministrado de forma intensiva durante dois dias.  Ao final
+      do curso os alunos terão a sua disposição uma série de exercícios para
+      exercitar o conhecimento adquirido.  A submissão e revisão desses
+      exercícios será através do github.
+    </p>
+    <hr><br>
+    <p><b>Nota: Horários abaixo é um rascunho e pode ser mudado no decorrer do curso.</b></p>
+
+  </div>
+
+  <div class="box column" id="schedule">
+    <h2>Dia 1: Fevereiro xx, 2015 (Sala: XX)</h2>
+    <h3>17:00 - 18:00 :
+	Introdução: O que é Python e por que devo aprender?</h3>
+    <ul>
+      <li>{{ notebook_link("Introdução", "notebooks/lecture_01.ipynb") }}</li>
+    </ul>
+
+    <h3>18:00 - 19:00 :
+      Aprendendo o básico: Variáveis, Sintaxe, <i>Data Types</i></h3>
+    <ul>
+      <li>{{ notebook_link("Aprendendo o básico", "notebooks/lecture_01.ipynb") }}</li>
+    </ul>
+
+    <h3>19:00 - 20:00 :
+      NumPy Arrays</h3>
+    <ul>
+      <li>{{ notebook_link("NumPy Arrays", "notebooks/lecture_01.ipynb") }}</li>
+    </ul>
+
+    <h2>Dia 2: Fevereiro xx, 2015 (Sala: XX)</h2>
+    <h3>17:00 - 18:00 :
+    Plotando com Matplolib</h3>
+    <ul>
+      <li>{{ notebook_link("Plotando com Matplolib", "notebooks/lecture_02.ipynb") }}</li>
+    </ul>
+
+    <h3>18:00 - 19:00 :
+      Lendo dados oceanográficos: netCDF, OPeNDAP, ERDDAP etc</h3>
+    <ul>
+      <li>{{ notebook_link("Lendo dados oceanográficos", "notebooks/lecture_02.ipynb") }}</li>
+    </ul>
+
+    <h3>19:00 - 20:00 :
+      Séries temporais com pandas</h3>
+    <ul>
+      <li>{{ notebook_link("Séries temporais com pandas", "notebooks/lecture_02.ipynb") }}</li>
+    </ul>
+
+  </div>
+</div>

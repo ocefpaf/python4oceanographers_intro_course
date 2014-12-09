@@ -1,0 +1,108 @@
+---
+extends: base.j2
+default_block: main
+title: Computer Setup
+description: Setting up your computer
+---
+
+<h1>Preparando o seu Computador</h1>
+
+<div class="columns">
+  <div class="box column" id="setup">
+    <h2>Hardware e Software</h2>
+    <p>
+      É essencial que cada aluno tenho seu próprio laptop ou desktop durante
+      o curso.  O curso foi desenhado para ser independente to sistema
+      operacional, mas é altamente recomendado o uso de de um sistema
+    <i>Unix-based</i> (como Linux).
+    </p>
+  </div>
+
+  <div class="box column" id="setup">
+    <h2>Instalando Python</h2>
+    <p>
+      Nesse curso utilizaremos <b>Python 3</b>, mas a sintaxe que utilizaremos
+      será aproximadamente 99% compatível com <b>Python 2.7</b>.
+    </p>
+
+    <h3>Módulos</h3>
+    <p>
+      Além do interpretador Python nos utilizaremos uma gama de pacotes
+      científicos:
+    </p>
+    <ul>
+      <li><a href="http://www.numpy.org">NumPy</a>: Módulo fundamental para computação científica em Python.</li>
+      <li><a href="http://www.scipy.org">SciPy</a>: Ecossistema em Python baseado em software livre  para matemática, ciência, e engenharia.</li>
+      <li><a href="http://www.matplotlib.org">matplotlib</a>: Biblioteca de plotagem 2D.</li>
+      <li><a href="http://ipython.org">IPython</a>: Ambiente Python interativo</li>
+    </ul>
+
+    <h3>Instalação</h3>
+    <p>Para instalar tudo eu recomendo o instalador <a href="https://store.continuum.io/cshop/anaconda/">Anaconda</a>, um produto
+    gratuito oferecido pela ContinuumIO.<p>
+      <ol>
+    <li>Baixe e instale Anaconda no seu sistema utilizando o link acima.
+      <pre>[~]$ bash Anaconda-1.x.x-Linux-x86.sh</pre>
+      Substitua Anaconda-1.x.x-Linux-x86.sh pela versão que você baixou.
+    </li>
+    <li><b>Abra uma janela do terminal</b>, e acerte o seu $PATH para apontar
+    para a instalação do Anaconda.  Test com
+    <pre>[~]$ which python</pre>
+      O resultado deve mostra o caminho da instalação nova.
+    <li>Atualize a sua distribuição Anaconda digitando
+      <pre>[~]$ conda update conda</pre>
+      (Conda é o gerenciador de pacotes do Anaconda.)
+    </li>
+    <li>Adicione um canal de módulos
+      <pre>[~]$ conda config --add channels https://conda.binstar.org/ocefpaf</pre>
+      (Conda é o gerenciador de pacotes do Anaconda.)
+    </li>
+    <li>Adicione um canal de módulos
+      <pre>[~]$ conda config --add channels https://conda.binstar.org/ocefpaf</pre>
+      (Conda é o gerenciador de pacotes do Anaconda.)
+    </li>
+    <li>Instale o software necessário para o curso com
+      <pre>[~]$ conda create -n curso --file req.txt</pre>
+      (Baixe <a href="http://404.html">
+    aqui</a> o arquivo req.txt.)
+    </li>
+    <li>Confira se o seu IPython notebook está funcionando corretamente: digite
+      <pre>[~] ipython notebook</pre>
+      e uma janela do seu browser deve abrir mostrando o notebook.
+      </ol>
+  </div>
+
+  <div class="box column" id="setup">
+    <h2>Instalando Git</h2>
+    <p>
+      <a href="http://git-scm.com/">Git</a> pode ser facilmente instalado
+      no linux.  Instruções mais detalhadas podem ser encontradas
+      <a href="http://git-scm.com/book/en/Getting-Started-Installing-Git">aqui</a>.
+     </p>
+
+    <h3>Linux</h3>
+      <p>use o gerenciador de pacotes da sua distribuição linux
+      <pre>[~]$ sudo zypper in git # OpenSUSE</pre>
+      ou
+      <pre>[~]$ sudo apt-get install git # Debian/Ubuntu</pre>
+      ou
+      <pre>[~]$ yum install git-core # Fedora/RedHat</pre>
+    </p>
+
+    <h3>Windows</h3>
+      <p>
+        Git pode ser instalado em windows usando as ferramentas disponíveis
+        em <a href="http://msysgit.github.com/">http://msysgit.github.com/</a>.
+      </p>
+
+  </div>
+
+  <div class="box column" id="setup">
+    <h2>Baixando o Material do Curso</h2>
+    <p>Depois de instalar Git você pode baixar todo o conteúdo do curso
+    (incluindo o código fonte HTML dessa página) digitando
+      <pre>[~]$ git clone https://github.com/ocefpaf/python4oceanographers_intro_course.git</pre>
+      Caso queira se manter atualizado com o conteúdo entre na pasta criado e digite
+      <pre>[~]$ cd python4oceanographers_intro_course<br>[~]$ git pull</pre>
+  </div>
+</div>

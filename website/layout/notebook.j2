@@ -1,0 +1,6 @@
+{% macro notebook_link(title, nb_path) -%}
+   <a href="{{ content_url(nb_path|replace("ipynb", "html")) }}">{{ title }}</a>
+   <small>
+  (<a href="{{ content_url(nb_path) }}">raw</a> | <a href="http://nbviewer.ipython.org/url/{{ site_url }}/{{ nb_path }}">nbviewer</a>)
+   </small>
+{%- endmacro %}

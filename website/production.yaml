@@ -1,0 +1,13 @@
+extends: site.yaml
+
+mode: production
+media_url: /python4oceanographers_intro_course/media/
+base_url: /python4oceanographers_intro_course
+
+deploy_root: deploy_production
+
+publisher:
+    github:
+        type: hyde.ext.publishers.dvcs.Git
+        path: .
+        url: git@github.com:ocefpaf/ocefpaf.github.io.git
