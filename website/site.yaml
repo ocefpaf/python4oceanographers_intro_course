@@ -51,6 +51,7 @@ context:
                 url: downloads.html
 
 meta:
+    google_analytics: UA-9133259-16
     nodemeta: meta.yaml
     created: !!timestamp 2014-12-09 00:00:00
     author: Filipe Fernandes
