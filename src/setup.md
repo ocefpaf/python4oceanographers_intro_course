@@ -107,6 +107,7 @@ As instruções requirem o uso da linha de comando.  Abra a aplicação do
 familiarize com o uso do terminal em OS-X.  Caso nunca tenha usado leia esse blog:
 
 http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line
+(Não esta aparecendo como link quando o site é rendereizado)
 
 ### Instalando em OSX com Miniconda
 
