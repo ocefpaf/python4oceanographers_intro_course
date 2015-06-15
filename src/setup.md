@@ -106,7 +106,7 @@ As instruções requirem o uso da linha de comando.  Abra a aplicação do
 `Applications\Utilities\Terminal.app`.  É altamente recomendável que você se
 familiarize com o uso do terminal em OS-X.  Caso nunca tenha usado leia esse blog:
 
-http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line
+[http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line](http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)
 
 ### Instalando em OSX com Miniconda
 
