@@ -1,6 +1,7 @@
 # Informação sobre o curso
 
 **Introdução à linguagem de programação Python**
+
 *Universidade Federal da Bahia, 2015*
 
 **Instrutor:** [Filipe Fernandes](http://ocefpaf.github.io/homepage/)
