@@ -1,25 +1,23 @@
-# Hardware e Software
-É essencial que cada aluno tenho seu próprio laptop ou desktop durante o
-curso. O curso foi desenhado para ser independente to sistema operacional,
-mas é altamente recomendado o uso de de um sistema *Unix-based*
-(como Linux).
-
 # Instalando Python
+É essencial que cada aluno tenho seu próprio laptop durante o curso.  O curso
+foi desenhado para ser independente to sistema operacional, mas é altamente
+recomendado o uso de de um sistema baseado em *\*nix* como o Linux.
+
 
 ## Módulos
 
 Além do interpretador Python\* nos utilizaremos uma gama de pacotes
-científicos:
+científicos.  A lista abaixo contém um mínimo necessário para começar:
 
 - [NumPy](http://www.numpy.org/): Módulo fundamental para computação científica em Python.
 - [SciPy](http://www.scipy.org/): Ecossistema em Python baseado em software livre para matemática, ciência, e engenharia.
 - [matplotlib](http://www.matplotlib.org/): Biblioteca de plotagem 2D.
 - [IPython](http://ipython.org/): Ambiente Python interativo
 
-(\* Nesse curso utilizaremos Python 2.7, mas a sintaxe que utilizaremos será
-aproximadamente 99% compatível com Python 3.)
+\* Nesse curso utilizaremos Python 2.7, mas a sintaxe que utilizaremos será
+aproximadamente 99% compatível com Python 3.
 
-## Instalando os requisitos para o curso
+# Instalando os requisitos para o curso
 
 Python, e a maioria dos módulos criados para Python, são Software
 licenciados de forma *Open Source*.  Por isso há mais de uma forma de obter
@@ -32,7 +30,7 @@ ou sua versão light o [miniconda](http://conda.pydata.org/miniconda),
 ambos produtos gratuitos oferecido pela
 [ContinuumIO Analytics](http://continuum.io/).
 
-### Instalando em Linux com Miniconda
+## Linux
 
 ```bash
 url=http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh
@@ -43,32 +41,32 @@ export PATH=$HOME/miniconda/bin:$PATH
 conda update --yes conda
 ```
 
-#### Adicione um "canal" de módulos para oceanografia
+### Adicione um "canal" de módulos para oceanografia
 ```bash
 conda config --add channels ioos -f
 conda config --set show_channel_urls True
 ```
 
-#### Crie um ambiente para o curso
+### Crie um ambiente para o curso
 ```bash
 wget http://bit.ly/ioos_req -O ioos_req.txt
 conda create --yes -n curso --file ioos_req.txt python=2.7
 source activate curso
 ```
-#### Usar o miniconda como seu Python padrão
+### Usar o miniconda como seu Python padrão
 Caso queira usar essa instalação como seu Python padrão adicione as linhas
 abaixo em seu `.bashrc`:
 ```bash
 export PATH=$HOME/miniconda/bin:$PATH && source activate curso
 ```
 
-#### Para sair do ambiente do curso
+### Para sair do ambiente do curso
 ```bash
 source deactivate
 ```
 
 
-### Instalando em Windows usando o Anaconda
+## Windows
 
 1.  Navegue para [Anaconda Python Distribution](https://store.continuum.io/cshop/anaconda/) e clique em "download Anaconda."  Depois escolha seu instalador: `Windows 64-bit Python 2.7 Graphical Installer`.  (Não clique em `I WANT PYTHON3.4` e escolha Windows 32-bit caso esteja usando uma versão antiga do WindowsXP.)
 
@@ -76,7 +74,7 @@ source deactivate
 
 3. Clique em `Anaconda Command Prompt` para abrir uma linha de comandos.
 
-#### Crie um ambiente para o curso
+### Crie um ambiente para o curso
 
 4. Na linha de comando *Anaconda Command Prompt*, digite `launcher`.
 
@@ -102,7 +100,7 @@ activate curso
 conda install --file ioos_req_windows64.txt --yes
 ```
 
-### Instalando em Mac OS X
+## OSX
 As instruções requirem o uso da linha de comando.  Abra a aplicação do
 *Terminal*, que pode ser encontrada em:
 `Applications\Utilities\Terminal.app`.  É altamente recomendável que você se
@@ -110,7 +108,7 @@ familiarize com o uso do terminal em OS-X.  Caso nunca tenha usado leia esse blo
 
 http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line
 
-#### Instalando em OSX com Miniconda
+### Instalando em OSX com Miniconda
 
 ```bash
 url=http://repo.continuum.io/miniconda/Miniconda-latest-MacOSX-x86_64.sh
@@ -121,27 +119,27 @@ export PATH=$HOME/miniconda/bin:$PATH
 conda update --yes conda
 ```
 
-#### Adicione o “canal” de módulos para oceanografia
+### Adicione o “canal” de módulos para oceanografia
 ```bash
 conda config --add channels ioos -f
 conda config --set show_channel_urls True
 ```
 
-#### Crie um ambiente para o curso
+### Crie um ambiente para o curso
 ```bash
 curl -o ioos_req.txt http://bit.ly/ioos_req
 conda create --yes -n curso --file ioos_req.txt python=2.7
 source activate curso
 ```
 
-#### Usar o miniconda como seu Python padrão
+### Usar o miniconda como seu Python padrão
 Caso queira usar essa instalação como seu Python padrão adicione as linhas
 abaixo em seu `.bash_profile`:
 ```
 export PATH=$HOME/miniconda/bin:$PATH && source activate curso
 ```
 
-#### Exiting the IOOS environment
+### Para sair do ambiente do curso
 ```bash
 source deactivate
 ```
