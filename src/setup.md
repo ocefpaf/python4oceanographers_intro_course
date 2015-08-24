@@ -33,72 +33,23 @@ ambos produtos gratuitos oferecido pela
 ## Linux
 
 ```bash
+wget http://bit.ly/CursoUFBA -O requirements.txt
+
 url=http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh
 wget $url -O miniconda.sh
+
 chmod +x miniconda.sh
 ./miniconda.sh -b
 export PATH=$HOME/miniconda/bin:$PATH
-conda update --yes conda
 ```
-
-### Adicione um "canal" de módulos para oceanografia
-```bash
-conda config --add channels ioos -f
-conda config --set show_channel_urls True
-```
-
-### Crie um ambiente para o curso
-```bash
-wget http://bit.ly/ioos_req -O ioos_req.txt
-conda create --yes -n curso --file ioos_req.txt python=2.7
-source activate curso
-```
-### Usar o miniconda como seu Python padrão
-Caso queira usar essa instalação como seu Python padrão adicione as linhas
-abaixo em seu `.bashrc`:
-```bash
-export PATH=$HOME/miniconda/bin:$PATH && source activate curso
-```
-
-### Para sair do ambiente do curso
-```bash
-source deactivate
-```
-
 
 ## Windows
 
-1.  Navegue para [Anaconda Python Distribution](https://store.continuum.io/cshop/anaconda/) e clique em "download Anaconda."  Depois escolha seu instalador: `Windows 64-bit Python 2.7 Graphical Installer`.  (Não clique em `I WANT PYTHON3.4` e escolha Windows 32-bit caso esteja usando uma versão antiga do WindowsXP.)
+1.  Faça donwload e instale o [Miniconda para windows](http://conda.pydata.org/miniconda.html).
 
-2. Depois do download, rode o programa de instalação, depois vá em: "Start => All Programs" e abra a pasta do Anaconda.
+2. Faça [download](http://bit.ly/CursoUFBA) do arquivo de pré-requisitos para o curso.
 
-3. Clique em `Anaconda Command Prompt` para abrir uma linha de comandos.
-
-### Crie um ambiente para o curso
-
-4. Na linha de comando *Anaconda Command Prompt*, digite `launcher`.
-
-5. No *Launcher*, clique em *Manage Channels* encima à direita.
-
-6. Digite "ioos" na caixa de texto, clique em *Add Channel*.  Note que você
-deve ter apenas 2 canais: `ioos` e `defaults`.  Clique em *Submit*.
-
-7. No *Launcher*, clique em *Environment* no topo, depois em *new environment* e na caixa *New Environment Name*, digite "curso" e deixe a versão do Python em 2.7.  Clique em *submit*.
-
-8. Depois clique em *Environment* novamente e certifique que "curso" está selecionado.
-
-9. Abra a janela de comando do *Anaconda* e cheque o diretório que você está.
-
-10. Faça o download do arquivo de requisitos para
-[Windows](https://raw.githubusercontent.com/ioos/conda-recipes/master/00_env_requirements/ioos/ioos_req_windows64.txt)
-no diretório acima.
-
-
-3. Na linha de comandos digite:
-```
-activate curso
-conda install --file ioos_req_windows64.txt --yes
-```
+3. Abra um terminal do DOS. (Vé em "run" e digite `cmd`.)
 
 ## OSX
 As instruções requirem o uso da linha de comando.  Abra a aplicação do
@@ -108,35 +59,30 @@ familiarize com o uso do terminal em OS-X.  Caso nunca tenha usado leia esse blo
 
 [http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line](http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)
 
-### Instalando em OSX com Miniconda
-
 ```bash
-url=http://repo.continuum.io/miniconda/Miniconda-latest-MacOSX-x86_64.sh
+curl http://bit.ly/CursoUFBA -o requirements.txt
+
+url=http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh
 curl $url -o miniconda.sh
+
 chmod +x miniconda.sh
 ./miniconda.sh -b
 export PATH=$HOME/miniconda/bin:$PATH
-conda update --yes conda
 ```
 
-### Adicione o “canal” de módulos para oceanografia
+## Após a instalação do Miniconda
+
+### Adicione um "canal" de módulos para oceanografia e faça um update
 ```bash
 conda config --add channels ioos -f
 conda config --set show_channel_urls True
+conda update --yes all
 ```
 
 ### Crie um ambiente para o curso
 ```bash
-curl -o ioos_req.txt http://bit.ly/ioos_req
-conda create --yes -n curso --file ioos_req.txt python=2.7
-source activate curso
-```
-
-### Usar o miniconda como seu Python padrão
-Caso queira usar essa instalação como seu Python padrão adicione as linhas
-abaixo em seu `.bash_profile`:
-```
-export PATH=$HOME/miniconda/bin:$PATH && source activate curso
+conda create --yes -n CursoUFBA --file requirements.txt python=2.7
+source activate CursoUFBA
 ```
 
 ### Para sair do ambiente do curso
