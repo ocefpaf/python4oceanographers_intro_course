@@ -141,6 +141,8 @@
         
             <li><a href="#osx">OSX</a></li>
         
+            <li><a href="#apos-a-instalacao-do-miniconda">Após a instalação do Miniconda</a></li>
+        
     
     </ul>
 </div></div>
@@ -172,114 +174,57 @@ ou sua versão light o <a href="http://conda.pydata.org/miniconda">miniconda</a>
 ambos produtos gratuitos oferecido pela
 <a href="http://continuum.io/">ContinuumIO Analytics</a>.</p>
 <h2 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link"></a></h2>
-<pre><code class="bash">url=http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh
+<pre><code class="bash">wget http://bit.ly/CursoUFBA -O requirements.txt
+
+url=http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh
 wget $url -O miniconda.sh
+
 chmod +x miniconda.sh
 ./miniconda.sh -b
 export PATH=$HOME/miniconda/bin:$PATH
-conda update --yes conda
-</code></pre>
-
-<h3 id="adicione-um-canal-de-modulos-para-oceanografia">Adicione um &ldquo;canal&rdquo; de módulos para oceanografia<a class="headerlink" href="#adicione-um-canal-de-modulos-para-oceanografia" title="Permanent link"></a></h3>
-<pre><code class="bash">conda config --add channels ioos -f
-conda config --set show_channel_urls True
-</code></pre>
-
-<h3 id="crie-um-ambiente-para-o-curso">Crie um ambiente para o curso<a class="headerlink" href="#crie-um-ambiente-para-o-curso" title="Permanent link"></a></h3>
-<pre><code class="bash">wget http://bit.ly/ioos_req -O ioos_req.txt
-conda create --yes -n curso --file ioos_req.txt python=2.7
-source activate curso
-</code></pre>
-
-<h3 id="usar-o-miniconda-como-seu-python-padrao">Usar o miniconda como seu Python padrão<a class="headerlink" href="#usar-o-miniconda-como-seu-python-padrao" title="Permanent link"></a></h3>
-<p>Caso queira usar essa instalação como seu Python padrão adicione as linhas
-abaixo em seu <code>.bashrc</code>:</p>
-<pre><code class="bash">export PATH=$HOME/miniconda/bin:$PATH &amp;&amp; source activate curso
-</code></pre>
-
-<h3 id="para-sair-do-ambiente-do-curso">Para sair do ambiente do curso<a class="headerlink" href="#para-sair-do-ambiente-do-curso" title="Permanent link"></a></h3>
-<pre><code class="bash">source deactivate
 </code></pre>
 
 <h2 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link"></a></h2>
 <ol>
 <li>
-<p>Navegue para <a href="https://store.continuum.io/cshop/anaconda/">Anaconda Python Distribution</a> e clique em &ldquo;download Anaconda.&rdquo;  Depois escolha seu instalador: <code>Windows 64-bit Python 2.7 Graphical Installer</code>.  (Não clique em <code>I WANT PYTHON3.4</code> e escolha Windows 32-bit caso esteja usando uma versão antiga do WindowsXP.)</p>
+<p>Faça donwload e instale o <a href="http://conda.pydata.org/miniconda.html">Miniconda para windows</a>.</p>
 </li>
 <li>
-<p>Depois do download, rode o programa de instalação, depois vá em: &ldquo;Start =&gt; All Programs&rdquo; e abra a pasta do Anaconda.</p>
+<p>Faça <a href="http://bit.ly/CursoUFBA">download</a> do arquivo de pré-requisitos para o curso.</p>
 </li>
 <li>
-<p>Clique em <code>Anaconda Command Prompt</code> para abrir uma linha de comandos.</p>
+<p>Abra um terminal do DOS. (Vé em &ldquo;run&rdquo; e digite <code>cmd</code>.)</p>
 </li>
 </ol>
-<h3 id="crie-um-ambiente-para-o-curso_1">Crie um ambiente para o curso<a class="headerlink" href="#crie-um-ambiente-para-o-curso_1" title="Permanent link"></a></h3>
-<ol>
-<li>
-<p>Na linha de comando <em>Anaconda Command Prompt</em>, digite <code>launcher</code>.</p>
-</li>
-<li>
-<p>No <em>Launcher</em>, clique em <em>Manage Channels</em> encima à direita.</p>
-</li>
-<li>
-<p>Digite &ldquo;ioos&rdquo; na caixa de texto, clique em <em>Add Channel</em>.  Note que você
-deve ter apenas 2 canais: <code>ioos</code> e <code>defaults</code>.  Clique em <em>Submit</em>.</p>
-</li>
-<li>
-<p>No <em>Launcher</em>, clique em <em>Environment</em> no topo, depois em <em>new environment</em> e na caixa <em>New Environment Name</em>, digite &ldquo;curso&rdquo; e deixe a versão do Python em 2.7.  Clique em <em>submit</em>.</p>
-</li>
-<li>
-<p>Depois clique em <em>Environment</em> novamente e certifique que &ldquo;curso&rdquo; está selecionado.</p>
-</li>
-<li>
-<p>Abra a janela de comando do <em>Anaconda</em> e cheque o diretório que você está.</p>
-</li>
-<li>
-<p>Faça o download do arquivo de requisitos para
-<a href="https://raw.githubusercontent.com/ioos/conda-recipes/master/00_env_requirements/ioos/ioos_req_windows64.txt">Windows</a>
-no diretório acima.</p>
-</li>
-<li>
-<p>Na linha de comandos digite:</p>
-</li>
-</ol>
-<pre><code>activate curso
-conda install --file ioos_req_windows64.txt --yes
-</code></pre>
-
 <h2 id="osx">OSX<a class="headerlink" href="#osx" title="Permanent link"></a></h2>
 <p>As instruções requirem o uso da linha de comando.  Abra a aplicação do
 <em>Terminal</em>, que pode ser encontrada em:
 <code>Applications\Utilities\Terminal.app</code>.  É altamente recomendável que você se
 familiarize com o uso do terminal em OS-X.  Caso nunca tenha usado leia esse blog:</p>
 <p><a href="http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line">http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line</a></p>
-<h3 id="instalando-em-osx-com-miniconda">Instalando em OSX com Miniconda<a class="headerlink" href="#instalando-em-osx-com-miniconda" title="Permanent link"></a></h3>
-<pre><code class="bash">url=http://repo.continuum.io/miniconda/Miniconda-latest-MacOSX-x86_64.sh
+<pre><code class="bash">curl http://bit.ly/CursoUFBA -o requirements.txt
+
+url=http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh
 curl $url -o miniconda.sh
+
 chmod +x miniconda.sh
 ./miniconda.sh -b
 export PATH=$HOME/miniconda/bin:$PATH
-conda update --yes conda
 </code></pre>
 
-<h3 id="adicione-o-canal-de-modulos-para-oceanografia">Adicione o “canal” de módulos para oceanografia<a class="headerlink" href="#adicione-o-canal-de-modulos-para-oceanografia" title="Permanent link"></a></h3>
+<h2 id="apos-a-instalacao-do-miniconda">Após a instalação do Miniconda<a class="headerlink" href="#apos-a-instalacao-do-miniconda" title="Permanent link"></a></h2>
+<h3 id="adicione-um-canal-de-modulos-para-oceanografia-e-faca-um-update">Adicione um &ldquo;canal&rdquo; de módulos para oceanografia e faça um update<a class="headerlink" href="#adicione-um-canal-de-modulos-para-oceanografia-e-faca-um-update" title="Permanent link"></a></h3>
 <pre><code class="bash">conda config --add channels ioos -f
 conda config --set show_channel_urls True
+conda update --yes all
 </code></pre>
 
-<h3 id="crie-um-ambiente-para-o-curso_2">Crie um ambiente para o curso<a class="headerlink" href="#crie-um-ambiente-para-o-curso_2" title="Permanent link"></a></h3>
-<pre><code class="bash">curl -o ioos_req.txt http://bit.ly/ioos_req
-conda create --yes -n curso --file ioos_req.txt python=2.7
-source activate curso
+<h3 id="crie-um-ambiente-para-o-curso">Crie um ambiente para o curso<a class="headerlink" href="#crie-um-ambiente-para-o-curso" title="Permanent link"></a></h3>
+<pre><code class="bash">conda create --yes -n CursoUFBA --file requirements.txt python=2.7
+source activate CursoUFBA
 </code></pre>
 
-<h3 id="usar-o-miniconda-como-seu-python-padrao_1">Usar o miniconda como seu Python padrão<a class="headerlink" href="#usar-o-miniconda-como-seu-python-padrao_1" title="Permanent link"></a></h3>
-<p>Caso queira usar essa instalação como seu Python padrão adicione as linhas
-abaixo em seu <code>.bash_profile</code>:</p>
-<pre><code>export PATH=$HOME/miniconda/bin:$PATH &amp;&amp; source activate curso
-</code></pre>
-
-<h3 id="para-sair-do-ambiente-do-curso_1">Para sair do ambiente do curso<a class="headerlink" href="#para-sair-do-ambiente-do-curso_1" title="Permanent link"></a></h3>
+<h3 id="para-sair-do-ambiente-do-curso">Para sair do ambiente do curso<a class="headerlink" href="#para-sair-do-ambiente-do-curso" title="Permanent link"></a></h3>
 <pre><code class="bash">source deactivate
 </code></pre></div>
             
