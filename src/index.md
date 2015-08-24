@@ -8,11 +8,12 @@
 
 **Aulas:**
 
-- Terça - Quarta 17:00 - 20:00
+- Quarta, Quinta e Sexta 13:00 - 17:00
 
 
 # Descrição
-Esse curso visa apresentar aos alunos a linguagem de programação Python através de exemplos aplicados à oceanografia.
+Esse curso visa apresentar aos alunos a linguagem de programação Python através
+de exemplos aplicados à oceanografia.
 
 O curso não assume conhecimento prévio da nenhuma linguagem de programação
 e segue uma filosofia similar aos texto do blog
@@ -32,3 +33,6 @@ ensinar por exemplos.
 - Plotando com Matplolib
 - Lendo dados oceanográficos (netCDF, OPeNDAP, ERDDAP etc)
 - Séries temporais com pandas
+
+**Dia 3**
+- Exemplos com dados trazidos pelos alunos.
