@@ -193,7 +193,7 @@ export PATH=$HOME/miniconda/bin:$PATH
 <p>Faça <a href="http://bit.ly/CursoUFBA">download</a> do arquivo de pré-requisitos para o curso.</p>
 </li>
 <li>
-<p>Abra um terminal do DOS. (Vé em &ldquo;run&rdquo; e digite <code>cmd</code>.)</p>
+<p>Abra um terminal do DOS. (Aperte &ldquo;Tecla do Windows+R&rdquo; e digite <code>cmd</code>.)</p>
 </li>
 </ol>
 <h2 id="osx">OSX<a class="headerlink" href="#osx" title="Permanent link"></a></h2>
@@ -202,9 +202,7 @@ export PATH=$HOME/miniconda/bin:$PATH
 <code>Applications\Utilities\Terminal.app</code>.  É altamente recomendável que você se
 familiarize com o uso do terminal em OS-X.  Caso nunca tenha usado leia esse blog:</p>
 <p><a href="http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line">http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line</a></p>
-<pre><code class="bash">curl http://bit.ly/CursoUFBA -o requirements.txt
-
-url=http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh
+<pre><code class="bash">url=http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh
 curl $url -o miniconda.sh
 
 chmod +x miniconda.sh
@@ -213,19 +211,31 @@ export PATH=$HOME/miniconda/bin:$PATH
 </code></pre>
 
 <h2 id="apos-a-instalacao-do-miniconda">Após a instalação do Miniconda<a class="headerlink" href="#apos-a-instalacao-do-miniconda" title="Permanent link"></a></h2>
-<h3 id="adicione-um-canal-de-modulos-para-oceanografia-e-faca-um-update">Adicione um &ldquo;canal&rdquo; de módulos para oceanografia e faça um update<a class="headerlink" href="#adicione-um-canal-de-modulos-para-oceanografia-e-faca-um-update" title="Permanent link"></a></h3>
+<h3 id="adicione-um-canal-de-modulos-para-oceanografia-e-faca-um-update">Adicione um &ldquo;canal&rdquo; de módulos para oceanografia e faça um <em>update</em><a class="headerlink" href="#adicione-um-canal-de-modulos-para-oceanografia-e-faca-um-update" title="Permanent link"></a></h3>
 <pre><code class="bash">conda config --add channels ioos -f
-conda config --set show_channel_urls True
-conda update --yes all
+conda update --yes --all
 </code></pre>
 
 <h3 id="crie-um-ambiente-para-o-curso">Crie um ambiente para o curso<a class="headerlink" href="#crie-um-ambiente-para-o-curso" title="Permanent link"></a></h3>
 <pre><code class="bash">conda create --yes -n CursoUFBA --file requirements.txt python=2.7
-source activate CursoUFBA
+</code></pre>
+
+<h3 id="para-entrar-no-ambiente-do-curso">Para entrar no ambiente do curso<a class="headerlink" href="#para-entrar-no-ambiente-do-curso" title="Permanent link"></a></h3>
+<h4 id="linux-e-osx">Linux e OSX<a class="headerlink" href="#linux-e-osx" title="Permanent link"></a></h4>
+<pre><code class="bash">source activate CursoUFBA
+</code></pre>
+
+<h4 id="windwos">Windwos<a class="headerlink" href="#windwos" title="Permanent link"></a></h4>
+<pre><code class="bash">activate CursoUFBA
 </code></pre>
 
 <h3 id="para-sair-do-ambiente-do-curso">Para sair do ambiente do curso<a class="headerlink" href="#para-sair-do-ambiente-do-curso" title="Permanent link"></a></h3>
+<h4 id="linux-e-osx_1">Linux e OSX<a class="headerlink" href="#linux-e-osx_1" title="Permanent link"></a></h4>
 <pre><code class="bash">source deactivate
+</code></pre>
+
+<h4 id="windwos_1">Windwos<a class="headerlink" href="#windwos_1" title="Permanent link"></a></h4>
+<pre><code class="bash">deactivate # ou feche o terminal.
 </code></pre></div>
             
         </div>
