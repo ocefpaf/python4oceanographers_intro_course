@@ -190,7 +190,7 @@ export PATH=$HOME/miniconda/bin:$PATH
 <p>Faça <em>donwload</em> e instale o <a href="http://conda.pydata.org/miniconda.html">Miniconda para windows</a>.</p>
 </li>
 <li>
-<p>Faça <a href="http://bit.ly/CursoUFBA">download</a> do arquivo de pré-requisitos para o curso.</p>
+<p>Baixe também o <a href="http://bit.ly/CursoUFBA">arquivo</a> de pré-requisitos para o curso.</p>
 </li>
 <li>
 <p>Abra um terminal do DOS. (Aperte &ldquo;Tecla do Windows+R&rdquo; e digite <code>cmd</code>.)</p>
@@ -202,11 +202,12 @@ export PATH=$HOME/miniconda/bin:$PATH
 <code>Applications\Utilities\Terminal.app</code>.  É altamente recomendável que você se
 familiarize com o uso do terminal em OS-X.  Caso nunca tenha usado leia esse blog:</p>
 <p><a href="http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line">http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line</a></p>
-<pre><code class="bash">url=http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh
+<pre><code class="bash">curl https://raw.githubusercontent.com/ocefpaf/python4oceanographers_intro_course/master/notebooks/requirements.txt -o requirements.txt
+
+url=http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh
 curl $url -o miniconda.sh
 
-chmod +x miniconda.sh
-./miniconda.sh -b
+bash miniconda.sh -b
 export PATH=$HOME/miniconda/bin:$PATH
 </code></pre>
 
