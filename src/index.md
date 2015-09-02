@@ -24,6 +24,7 @@ ensinar por exemplos.
 
 **Dia 1**
 
+- Notebooks:
 - Introdução
 - Sintaxe e Data Types
 - NumPy Arrays
