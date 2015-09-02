@@ -7,7 +7,9 @@ recomendado o uso de de um sistema baseado em *\*nix* como o Linux.
 ## Módulos
 
 Além do interpretador Python\* nos utilizaremos uma gama de pacotes
-científicos.  A lista abaixo contém um mínimo necessário para começar:
+científicos.  A lista abaixo contém um mínimo necessário para começar.
+**Vamos instalar tudo usando o miniconda.  Visite os sites para
+conhecer os módulos mas não faça download de nada.**
 
 - [NumPy](http://www.numpy.org/): Módulo fundamental para computação científica em Python.
 - [SciPy](http://www.scipy.org/): Ecossistema em Python baseado em software livre para matemática, ciência, e engenharia.
@@ -38,18 +40,17 @@ wget http://bit.ly/CursoUFBA -O requirements.txt
 url=http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh
 wget $url -O miniconda.sh
 
-chmod +x miniconda.sh
-./miniconda.sh -b
+bash miniconda.sh -b
 export PATH=$HOME/miniconda/bin:$PATH
 ```
 
 ## Windows
 
-1.  Faça donwload e instale o [Miniconda para windows](http://conda.pydata.org/miniconda.html).
+1. Faça *donwload* e instale o [Miniconda para windows](http://conda.pydata.org/miniconda.html).
 
-2. Faça [download](http://bit.ly/CursoUFBA) do arquivo de pré-requisitos para o curso.
+2. Baixe também o [arquivo](http://bit.ly/CursoUFBA) de pré-requisitos para o curso.
 
-3. Abra um terminal do DOS. (Vé em "run" e digite `cmd`.)
+3. Abra um terminal do DOS. (Aperte "Tecla do Windows+R" e digite `cmd`.)
 
 ## OSX
 As instruções requirem o uso da linha de comando.  Abra a aplicação do
@@ -60,32 +61,46 @@ familiarize com o uso do terminal em OS-X.  Caso nunca tenha usado leia esse blo
 [http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line](http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)
 
 ```bash
-curl http://bit.ly/CursoUFBA -o requirements.txt
+curl https://raw.githubusercontent.com/ocefpaf/python4oceanographers_intro_course/master/notebooks/requirements.txt -o requirements.txt
 
 url=http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh
 curl $url -o miniconda.sh
 
-chmod +x miniconda.sh
-./miniconda.sh -b
+bash miniconda.sh -b
 export PATH=$HOME/miniconda/bin:$PATH
 ```
 
 ## Após a instalação do Miniconda
 
-### Adicione um "canal" de módulos para oceanografia e faça um update
+### Adicione um "canal" de módulos para oceanografia e faça um *update*
 ```bash
 conda config --add channels ioos -f
-conda config --set show_channel_urls True
-conda update --yes all
+conda update --yes --all
 ```
 
 ### Crie um ambiente para o curso
 ```bash
 conda create --yes -n CursoUFBA --file requirements.txt python=2.7
+```
+
+### Para entrar no ambiente do curso
+#### Linux e OSX
+```bash
 source activate CursoUFBA
 ```
 
+#### Windows
+```bash
+activate CursoUFBA
+```
+
 ### Para sair do ambiente do curso
+#### Linux e OSX
 ```bash
 source deactivate
+```
+
+#### Windows
+```bash
+deactivate # ou feche o terminal.
 ```
