@@ -1,0 +1,3 @@
+conda install -c r r
+conda install -c r r-irkernel
+pip install -U fortran-magic

@@ -13,9 +13,11 @@ iris
 matplotlib
 numpy
 oceans
+oct2py
 pandas
 pyproj
 pyproj
+pywafo
 rasterio
 requests
 scikit-learn
@@ -24,3 +26,4 @@ seaborn
 shapely
 statsmodels
 sympy
+xlrd
